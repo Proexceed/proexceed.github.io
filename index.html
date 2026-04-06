@@ -133,13 +133,27 @@ footer {
   <p>Energy • Technology • Real Estate • Education • Wellness • EcoMaterials</p>
 </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#divisions">Divisions</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+<div style="background:#0b2c5f; padding:15px; color:white; position:relative;">
+  
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-weight:bold; font-size:18px;">ProExceed</div>
+
+    <!-- Hamburger -->
+    <div onclick="toggleMenu()" style="font-size:24px; cursor:pointer;">
+      ☰
+    </div>
+  </div>
+
+  <!-- Menu Links -->
+  <div id="mobileMenu" style="display:none; margin-top:10px;">
+    <a href="#home" style="display:block; color:white; padding:8px 0;">Home</a>
+    <a href="#about" style="display:block; color:white; padding:8px 0;">About</a>
+    <a href="#divisions" style="display:block; color:white; padding:8px 0;">Divisions</a>
+    <a href="#services" style="display:block; color:white; padding:8px 0;">Services</a>
+    <a href="#contact" style="display:block; color:white; padding:8px 0;">Contact</a>
+  </div>
+
+</div>
 
 <section id="home" class="hero">
   <div style="text-align:center; padding:40px;">
