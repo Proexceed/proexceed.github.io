@@ -97,7 +97,30 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  font-size: 13px;
+  font-size: 13px;.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 99999;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  display: block;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex !important;
+  }
+}
 }/* PREMIUM NAVBAR */
 .navbar {
   position: fixed;
