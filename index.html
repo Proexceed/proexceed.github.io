@@ -108,19 +108,8 @@ footer {
   z-index: 99999;
 }
 
-.menu-toggle span {
-  width: 28px;
-  height: 3px;
-  background: white;
-  display: block;
-  border-radius: 3px;
-}
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex !important;
-  }
-}
+
 }/* PREMIUM NAVBAR */
 .navbar {
   position: fixed;
@@ -161,12 +150,7 @@ footer {
 }
 
 /* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
+
 transparent {
   background: rgba(11, 44, 95, 0.95);
 }
@@ -219,15 +203,7 @@ transparent {
 }
 
 
-@media (max-width: 768px) {
 
-  .menu-toggle {
-    display: block !important;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    z-index: 3000;
-  }
 
   .nav-links {
     display: none;
@@ -246,21 +222,10 @@ transparent {
 /* ===== NUCLEAR NAVBAR FIX ===== */
 
 /* FORCE HAMBURGER ALWAYS VISIBLE */
-.menu-toggle {
-  display: block !important;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 32px;
-  color: yellow !important;
-  z-index: 99999;
-}
+
 
 /* HIDE NAV LINKS ON MOBILE */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none !important;
-  }
+
 
   .nav-links.active {
     display: flex !important;
