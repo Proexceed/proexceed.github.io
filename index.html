@@ -1,222 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="icon" type="image/png" href="logo.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProExceed Transnational Limited</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #1a1a1a;
-}
+  <title>ProExceed Transnational Limited | Global Solutions</title>
 
-/* HEADER */
-header {
-  background: #0A1F44;
-  color: white;
-  padding: 25px;
-  text-align: center;
-}
+  <!-- SEO -->
+  <meta name="description" content="ProExceed delivers global solutions in technology, education, real estate, energy, and wellness. Helping individuals and businesses grow worldwide.">
 
-/* NAVBAR */
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-/* HERO */
-.hero {
-  padding: 70px 20px;
-  text-align: center;
-  background: #f5f7fb;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
 
-.hero h1 {
-  font-size: 34px;
-}
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #0A1F44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1000;
+    }
 
-.btn {
-  background: #D4AF37;
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
-  border-radius: 5px;
-}
+    .logo img {
+      height: 50px;
+    }
 
-/* SECTIONS */
-.section {
-  padding: 50px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
 
-.section h2 {
-  color: #0A1F44;
-}
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+    /* HAMBURGER */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
 
-/* CARDS */
-.card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
-  background: white;
-}
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0A1F44;
+        width: 200px;
+        padding: 20px;
+      }
 
-.card h3 {
-  color: #0A1F44;
-}
+      .nav-links.active {
+        display: flex;
+      }
 
-/* CTA */
-.cta {
-  background: #0A1F44;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
+      .menu-toggle {
+        display: block;
+      }
+    }
 
-.cta a {
-  background: #D4AF37;
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
+    /* HEADER */
+    header {
+      background: #0A1F44;
+      color: white;
+      padding: 120px 20px 40px;
+      text-align: center;
+    }
 
-/* FOOTER */
+    /* SECTIONS */
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-footer {
-  background: #081733;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 13px;
-}
+    .section h2 {
+      color: #0A1F44;
+    }
 
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-}/* PREMIUM NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 30px;
-  background: rgba(11, 44, 95, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
+    /* CARD */
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      background: white;
+      transition: 0.3s;
+    }
 
-  display: flex;   
-  align-items: center; 
-  justify-content: space-between; 
-}
-/* NAV CONTAINER */
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
 
-/* LOGO */
-.logo img {
-  height: 60px;
-}
+    .card h3 {
+      color: #0A1F44;
+    }
 
-/* NAV LINKS (DESKTOP) */
-
-
-/* HAMBURGER */
-
-transparent {
-  background: rgba(11, 44, 95, 0.95);
-}
-
-.navbar.scrolled {
-  background: #0b2c5f;
-}
-
-
-.cta-btn {
-  background: #25D366;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: white;
-  color: black;
-  top: 30px;
-  min-width: 180px;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: black;
-}
-
-
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 75px;
-  object-fit: contain;
-}
-
-
-
-
-
-  .nav-links.active {
-    display: flex;
-  }
-/* ===== NUCLEAR NAVBAR FIX ===== */
-
-/* FORCE HAMBURGER ALWAYS VISIBLE */
-.menu-toggle {
-  display: block !important;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 32px;
-  color: yellow !important;
-  z-index: 99999;
-}
-
-
-  .nav-links.active {
-    display: flex !important;
-    flex-direction: column;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #0b2c5f;
-    padding: 20px;
-    z-index: 99998;
-  }
-}
-
-</style>
+    /* FOOTER */
+    footer {
+      background: #081733;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+  </style>
 </head>
+
 <body>
 <div class="navbar transparent" id="navbar">
   <div class="nav-container">
