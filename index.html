@@ -116,35 +116,80 @@ header {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-    /* CARD */
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 10px;
-      background: white;
-      transition: 0.3s;
-    }
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0A1F44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+/* LOGO */
+.logo img {
+  height: 45px;
+}
 
-    .card h3 {
-      color: #0A1F44;
-    }
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
 
-    /* FOOTER */
-    footer {
-      background: #081733;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-    }
-  </style>
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CTA */
+.cta-btn {
+  background: gold;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0A1F44;
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+</style>
 </head>
 
 <body>
