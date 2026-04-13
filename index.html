@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ProExceed Transnational Limited | Global Solutions</title>
+
+<meta name="description" content="ProExceed delivers global solutions in Energy, Technology, Real Estate, Education, Wellness and EcoMaterials.">
+
+<link rel="icon" href="logo.png">
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0A1F44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* MENU TOGGLE */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: #0A1F44;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* HERO */
+.hero {
+  margin-top: 80px;
+  background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.8)),
+  url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* DIVISIONS */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* WHY SECTION */
+.why {
+  background: #ffffff;
+}
+
+.why-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.why-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  width: 220px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: #f9f9f9;
+}
+
+/* CONTACT */
+.contact p {
+  margin: 10px 0;
+}
+
+/* FOOTER */
+.footer {
+  background: #0A1F44;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* MOBILE GRID */
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <img src="logo.png">
+  </div>
+
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#divisions">Divisions & Services</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>ProExceed Transnational Limited</h1>
+  <p>Global Solutions Across Multiple Industries</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <h2>About Us</h2>
+  <p style="max-width:700px;margin:auto;">
+    ProExceed Transnational Limited delivers innovative solutions across Energy, Technology,
+    Real Estate, Education, Wellness and EcoMaterials. We help individuals and businesses scale globally.
+  </p>
+</div>
+
+<!-- DIVISIONS -->
+<div class="section" id="divisions">
+  <h2>Divisions & Services</h2>
+  <div class="services">
+
+    <div class="card"><h3>Energy</h3><p>Clean and sustainable energy solutions.</p></div>
+    <div class="card"><h3>Technology</h3><p>Web development and digital systems.</p></div>
+    <div class="card"><h3>Real Estate</h3><p>Property investment and advisory.</p></div>
+    <div class="card"><h3>Education</h3><p>Online courses and training programs.</p></div>
+    <div class="card"><h3>Wellness</h3><p>Health and fitness solutions.</p></div>
+    <div class="card"><h3>EcoMaterials</h3><p>Sustainable materials and innovation.</p></div>
+
+  </div>
+</div>
+
+<!-- WHY CHOOSE -->
+<div class="section why">
+  <h2>Why Choose ProExceed</h2>
+
+  <p style="max-width:700px;margin:10px auto 30px;color:#555;">
+    We provide reliable, results-driven solutions across multiple industries,
+    helping individuals and businesses grow globally.
+  </p>
+
+  <div class="why-box">
+    <div class="why-card"><h4>🌍 Global Reach</h4><p>Serving clients worldwide.</p></div>
+    <div class="why-card"><h4>⚡ Fast & Reliable</h4><p>Quick and dependable service.</p></div>
+    <div class="why-card"><h4>🎯 Results-Driven</h4><p>Focused on real results.</p></div>
+    <div class="why-card"><h4>🤝 Trusted Brand</h4><p>Trusted across industries.</p></div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section testimonials">
+  <h2>What Our Clients Say</h2>
+
+  <p><strong>“Excellent service and fast response.”</strong><br>— James K., USA</p>
+  <p><strong>“Highly professional and reliable.”</strong><br>— Sarah M., UK</p>
+  <p><strong>“Great experience working with ProExceed.”</strong><br>— David L., Canada</p>
+  <p><strong>“Top-notch service delivery.”</strong><br>— Michael B., USA</p>
+  <p><strong>“Very trustworthy and efficient.”</strong><br>— Linda S., Australia</p>
+  <p><strong>“Exceeded my expectations.”</strong><br>— Daniel T., Germany</p>
+  <p><strong>“I will definitely recommend them.”</strong><br>— Grace A., Nigeria</p>
+</div>
+
+<!-- CONTACT -->
+<div class="section contact">
+  <h2>Contact Us</h2>
+  <p><strong>Email:</strong> info@proexceed.com</p>
+  <p><strong>Support:</strong> support@proexceed.com</p>
+  <p><strong>Call Us:</strong> +1 **********</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2026 ProExceed Transnational Limited</p>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/2347018824241" class="whatsapp" target="_blank">
+Chat with us on WhatsApp
+</a>
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  const toggle = document.getElementById("menuToggle");
+
+  nav.classList.toggle("active");
+
+  if (nav.classList.contains("active")) {
+    toggle.innerHTML = "✖";
+  } else {
+    toggle.innerHTML = "☰";
+  }
+}
+</script>
+
+</body>
+</html>
