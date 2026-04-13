@@ -248,6 +248,149 @@ function toggleMenu() {
 </script>
 
 </body>
+</html>.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  background: gold;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* MOBILE GRID */
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CONTACT */
+.contact p {
+  margin: 10px 0;
+}
+
+/* FOOTER */
+.footer {
+  background: #0A1F44;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="ProExceed Logo">
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="#" class="cta-btn">Get Started</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>ProExceed Transnational Limited</h1>
+  <p>Delivering Excellence in Technology, Education, Real Estate, Energy & Wellness</p>
+  <a href="#" class="btn">Work With Us</a>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Technology</h3>
+      <p>Web development, digital solutions, and IT services.</p>
+    </div>
+    <div class="card">
+      <h3>Education</h3>
+      <p>Online courses, ebooks, and academic programs.</p>
+    </div>
+    <div class="card">
+      <h3>Real Estate</h3>
+      <p>Property investment and consultancy services.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section contact">
+  <h2>Contact Us</h2>
+  <p><strong>General Inquiry:</strong> info@proexceed.com</p>
+  <p><strong>Customer Support:</strong> support@proexceed.com</p>
+  <p><strong>Call Us:</strong> +1 **********</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2026 ProExceed Transnational Limited. All Rights Reserved.</p>
+</div>
+
+<!-- WHATSAPP BUTTON (NUMBER HIDDEN) -->
+<a href="https://wa.me/2347018824241" class="whatsapp" target="_blank">
+  Chat with us on WhatsApp
+</a>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
 </html>
 /* BUTTON */
 .btn {
