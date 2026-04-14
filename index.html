@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ProExceed Transnational Limited | Global Solutions</title>
+
+<meta name="description" content="ProExceed delivers global solutions in Energy, Technology, Real Estate, Education, Wellness and EcoMaterials.">
+
+<link rel="icon" href="logo.png">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,sans-serif;line-height:1.6;}
+
+/* NAVBAR */
+.navbar{
+position:fixed;top:0;width:100%;
+background:#0A1F44;color:white;
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 25px;z-index:1000;
+}
+
+.logo img{height:90px;}
+
+.nav-links{display:flex;gap:25px;}
+.nav-links a{color:white;text-decoration:none;}
+
+.menu-toggle{display:none;font-size:28px;cursor:pointer;}
+
+/* MOBILE */
+@media(max-width:768px){
+.menu-toggle{display:block;}
+.nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:80px;right:10px;
+background:#0A1F44;
+padding:20px;border-radius:10px;
+}
+.nav-links.active{display:flex;}
+}
+
+/* HERO */
+.hero{
+margin-top:100px;
+background:linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)),
+url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+background-size:cover;color:white;
+text-align:center;padding:100px 20px;
+}
+
+/* SECTION */
+.section{padding:60px 20px;text-align:center;}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+.card{
+border:1px solid #ddd;
+padding:20px;border-radius:10px;
+background:white;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+/* MOBILE GRID */
+@media(max-width:768px){
+.services{grid-template-columns:1fr;}
+}
+
+/* WHY */
+.why{background:#fff;}
+.why-box{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+.why-card{background:#f5f5f5;padding:20px;border-radius:8px;width:220px;}
+
+/* TESTIMONIALS */
+.testimonials{background:#f9f9f9;}
+
+/* CONTACT */
+.contact p{margin:10px 0;}
+
+/* SOCIAL */
+.social a{
+margin:0 10px;
+font-size:22px;
+color:#0A1F44;
+}
+
+/* FOOTER */
+.footer{
+background:#0A1F44;
+color:white;text-align:center;padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:12px 18px;border-radius:50px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo"><img src="logo.png"></div>
+
+<div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#divisions">Divisions & Services</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>ProExceed Transnational Limited</h1>
+<p>Global Solutions Across Multiple Industries</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+<h2>About Us</h2>
+<p style="max-width:700px;margin:auto;">
+ProExceed Transnational Limited delivers innovative solutions across Energy,
+Technology, Real Estate, Education, Wellness and EcoMaterials.
+</p>
+</div>
+
+<!-- DIVISIONS -->
+<div class="section" id="divisions">
+<h2>Divisions & Services</h2>
+
+<div class="services">
+<a href="#contact"><div class="card"><h3>Energy</h3></div></a>
+<a href="#contact"><div class="card"><h3>Technology</h3></div></a>
+<a href="#contact"><div class="card"><h3>Real Estate</h3></div></a>
+<a href="#contact"><div class="card"><h3>Education</h3></div></a>
+<a href="#contact"><div class="card"><h3>Wellness</h3></div></a>
+<a href="#contact"><div class="card"><h3>EcoMaterials</h3></div></a>
+</div>
+</div>
+
+<!-- WHY -->
+<div class="section why">
+<h2>Why Choose ProExceed</h2>
+
+<p style="max-width:700px;margin:10px auto 30px;color:#555;">
+We provide reliable, results-driven solutions across multiple industries.
+</p>
+
+<div class="why-box">
+<div class="why-card"><h4>🌍 Global Reach</h4></div>
+<div class="why-card"><h4>⚡ Fast & Reliable</h4></div>
+<div class="why-card"><h4>🎯 Results-Driven</h4></div>
+<div class="why-card"><h4>🤝 Trusted Brand</h4></div>
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section testimonials">
+<h2>What Our Clients Say</h2>
+<p><strong>Excellent service</strong><br>— USA</p>
+<p><strong>Very professional</strong><br>— UK</p>
+<p><strong>Great experience</strong><br>— Canada</p>
+<p><strong>Top service</strong><br>— Germany</p>
+<p><strong>Reliable</strong><br>— Australia</p>
+<p><strong>Outstanding</strong><br>— UAE</p>
+<p><strong>Highly recommend</strong><br>— Nigeria</p>
+</div>
+
+<!-- CONTACT -->
+<div class="section contact" id="contact">
+<h2>Contact Us</h2>
+
+<p><i class="fa fa-envelope"></i> info@proexceed.com</p>
+<p><i class="fa fa-headset"></i> support@proexceed.com</p>
+<p><strong>Call:</strong> +1 **********</p>
+
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+
+<!-- PRIVACY POLICY -->
+<div class="section">
+<h2>Privacy Policy</h2>
+<p>Your privacy is very important to us at <strong>ProExceed</strong>.</p>
+<p>We collect personal information like name, email and usage data to improve services.</p>
+<p>You can request deletion anytime via info@proexceed.com.</p>
+</div>
+
+<!-- TERMS -->
+<div class="section">
+<h2>Terms of Service</h2>
+<p>By using this website, you agree to comply with our services and policies.</p>
+<p>We reserve the right to update or modify services at any time.</p>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="section">
+<h2>Disclaimer</h2>
+<p>All information provided is for general purposes only and does not constitute professional advice.</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<p>© 2026 ProExceed Transnational Limited</p>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/2347018824241" class="whatsapp" target="_blank">
+Chat with us on WhatsApp
+</a>
+
+<script>
+function toggleMenu(){
+const nav=document.getElementById("navLinks");
+const toggle=document.getElementById("menuToggle");
+
+nav.classList.toggle("active");
+
+toggle.innerHTML = nav.classList.contains("active") ? "✖" : "☰";
+}
+</script>
+
+</body>
+</html>
