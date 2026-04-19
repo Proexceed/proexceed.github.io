@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProExceed Transnational Limited</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+background:#f8fafc;color:#111827;
+}
+
+/* NAVBAR */
+.navbar{
+position:sticky;top:0;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 25px;
+background:#0f172a;color:white;z-index:1000;
+}
+
+.logo img{height:40px;}
+
+.nav-links{
+display:flex;gap:20px;align-items:center;
+}
+
+.nav-links a{
+color:#e5e7eb;text-decoration:none;font-size:14px;
+}
+
+.nav-links a:hover{color:white;}
+
+.cta{
+background:#2563eb;color:white;
+padding:10px 18px;border-radius:6px;
+}
+
+/* DROPDOWN */
+.dropdown{position:relative;}
+.dropdown-content{
+display:none;
+position:absolute;
+background:white;
+min-width:220px;
+top:30px;
+border-radius:8px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a{
+display:block;
+padding:12px;
+color:#111827;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* MOBILE */
+.menu-toggle{display:none;font-size:26px;cursor:pointer;}
+
+@media(max-width:768px){
+.nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:60px;right:0;
+background:#0f172a;width:250px;padding:20px;
+}
+.nav-links.active{display:flex;}
+.menu-toggle{display:block;}
+
+.dropdown-content{
+position:static;
+box-shadow:none;
+background:#1e293b;
+}
+.dropdown-content a{color:white;}
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+color:white;text-align:center;padding:120px 20px;
+}
+.hero h1{font-size:42px;margin-bottom:10px;}
+.hero p{font-size:18px;}
+
+.btn{
+display:inline-block;margin-top:20px;
+background:white;color:#1e3a8a;
+padding:14px 28px;border-radius:8px;
+text-decoration:none;font-weight:600;
+}
+
+/* SECTIONS */
+.container{
+max-width:1100px;margin:auto;padding:80px 20px;
+}
+.section-title{text-align:center;margin-bottom:40px;}
+.section-title h2{font-size:30px;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;padding:25px;border-radius:12px;
+border:1px solid #e5e7eb;
+}
+
+.card h3{margin-bottom:10px;}
+
+/* CONTACT */
+.contact-box{
+background:white;padding:40px;border-radius:12px;
+max-width:700px;margin:auto;
+}
+
+input,textarea{
+width:100%;padding:12px;margin:10px 0;
+border:1px solid #ccc;border-radius:6px;
+}
+
+/* FOOTER */
+.footer{
+background:#0f172a;color:#9ca3af;
+text-align:center;padding:40px 20px;
+}
+
+.footer a{color:#9ca3af;margin:0 8px;text-decoration:none;}
+.footer a:hover{color:white;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#">Home</a>
+<a href="#about">About</a>
+
+<div class="dropdown">
+<a href="#">Services ▾</a>
+<div class="dropdown-content">
+<a href="#services">GeoEnergy & Borehole Drilling</a>
+<a href="#services">EcoMaterials & Recycling</a>
+<a href="#services">Properties & Estate</a>
+<a href="#services">Tech & Digital Services</a>
+<a href="#services">Wellness & Fitness</a>
+<a href="#services">Academy</a>
+</div>
+</div>
+
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
+<a href="#contact" class="cta">Get Started</a>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Driving Growth Through Smart Solutions</h1>
+<p>Energy • Technology • Real Estate • Education • Wellness</p>
+<a href="#contact" class="btn">Get Started</a>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="container">
+<div class="section-title">
+<h2>About ProExceed</h2>
+</div>
+
+<p><b>ProExceed Transnational Limited</b> is a multi-division enterprise delivering innovative, sustainable solutions across infrastructure, technology, real estate, education, and wellness.</p>
+
+<br>
+
+<p>We empower individuals and businesses with scalable, high-impact solutions designed for long-term growth and global competitiveness.</p>
+
+<br>
+
+<h3>Mission</h3>
+<p>To deliver innovative, high-quality solutions that empower people and businesses.</p>
+
+<br>
+
+<h3>Vision</h3>
+<p>To become a globally recognized brand known for excellence and impact.</p>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="container">
+<div class="section-title">
+<h2>Our Divisions</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>GeoEnergy & Borehole Drilling</h3>
+<p>Advanced drilling and water solutions delivering reliable access to clean water and energy systems.</p>
+</div>
+
+<div class="card">
+<h3>EcoMaterials & Recycling</h3>
+<p>Eco-friendly materials and recycling solutions promoting sustainability and circular economy.</p>
+</div>
+
+<div class="card">
+<h3>Properties & Estate</h3>
+<p>Modern real estate development and investment solutions delivering long-term value.</p>
+</div>
+
+<div class="card">
+<h3>Tech & Digital Services</h3>
+<p>Web development, automation, and digital systems to scale businesses globally.</p>
+</div>
+
+<div class="card">
+<h3>Wellness & Fitness</h3>
+<p>Health, fitness, and lifestyle solutions for sustainable performance and wellbeing.</p>
+</div>
+
+<div class="card">
+<h3>Academy</h3>
+<p>Education, courses, and training programs for academic and real-world success.</p>
+</div>
+
+</div>
+</div>
+
+<!-- BLOG -->
+<div id="blog" class="container">
+<div class="section-title">
+<h2>Insights & Blog</h2>
+<p>Coming soon: expert insights, tips, and updates.</p>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="container">
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-box">
+<form action="https://formspree.io/f/your-id" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<br>
+
+<p><b>Call:</b> +1********</p>
+<p><b>Email:</b> info@proexceed.com | support@proexceed.com</p>
+
+<br>
+
+<a href="https://wa.me/234XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<p>© 2026 ProExceed Transnational Limited</p>
+
+<p>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms</a>
+<a href="#">Disclaimer</a>
+</p>
+</div>
+
+<script>
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
