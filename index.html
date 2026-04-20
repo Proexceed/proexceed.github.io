@@ -379,40 +379,32 @@ border-radius:50%;
 <a href="https://wa.me/2347018824241?text=Hello%20ProExceed,%20I%20am%20interested%20in%20your%20services.%20Please%20provide%20details." class="whatsapp">💬</a>
 
 <script>
-// TOGGLE MENU
-function toggleMenu(e){
-  e.stopPropagation(); // 🔥 prevents instant close
+const menuBtn = document.getElementById("menuToggle");
+const nav = document.getElementById("navLinks");
 
-  let nav = document.getElementById("navLinks");
-  let icon = document.getElementById("menuToggle");
+// CLICK HAMBURGER
+menuBtn.addEventListener("click", function(e){
+  e.stopPropagation();
 
   nav.classList.toggle("active");
 
-  icon.textContent = nav.classList.contains("active") ? "✕" : "☰";
-}
-
-// CLOSE WHEN CLICK OUTSIDE
-document.addEventListener("click", function(e){
-  const nav = document.getElementById("navLinks");
-  const icon = document.getElementById("menuToggle");
-
-  if(nav.classList.contains("active") &&
-     !nav.contains(e.target) &&
-     !icon.contains(e.target)){
-       
-    nav.classList.remove("active");
-    icon.textContent = "☰";
+  // FORCE icon change
+  if(nav.classList.contains("active")){
+    menuBtn.innerHTML = "✕";
+  } else {
+    menuBtn.innerHTML = "☰";
   }
 });
 
-// MOBILE DROPDOWN
-document.querySelectorAll(".dropdown > a").forEach(item=>{
-  item.addEventListener("click", function(e){
-    if(window.innerWidth <= 768){
-      e.preventDefault();
-      this.parentElement.classList.toggle("active");
-    }
-  });
+// CLICK OUTSIDE CLOSE
+document.addEventListener("click", function(e){
+  if(nav.classList.contains("active") &&
+     !nav.contains(e.target) &&
+     !menuBtn.contains(e.target)){
+
+    nav.classList.remove("active");
+    menuBtn.innerHTML = "☰";
+  }
 });
 </script>
 </body>
