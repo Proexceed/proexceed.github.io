@@ -39,15 +39,26 @@ z-index:1000;
 
 .logo img{height:60px;}
 
-.nav-links{
-display:flex;
-gap:20px;
-}
-
 .nav-links a{
 color:white;
 text-decoration:none;
 transition:0.3s;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:var(--accent);
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
 }
 
 .nav-links a:hover{
