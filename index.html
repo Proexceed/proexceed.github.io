@@ -188,10 +188,18 @@ transform:translateY(0);
 }
 
 /* TESTIMONIAL */
-.testimoniaentitykground:#0f2a5a;
+.testimonial{
+background:var(--card);
 padding:20px;
 border-radius:10px;
 text-align:center;
+border:1px solid rgba(212,175,55,0.2);
+transition:0.3s;
+}
+
+.testimonial:hover{
+box-shadow:0 0 20px rgba(212,175,55,0.3);
+transform:translateY(-5px);
 }
 
 .testimonial img{
