@@ -3,129 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ProExceed Transnational Limited</title>
+<title>ProExceed | Global Digital Solutions</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-  :root{
-  --primary:#0a1f44;
-  --secondary:#061530;
-  --card:#0f2a5a;
-  --accent:#d4af37;
-  --text:#ffffff;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
 
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-background:var(--primary);
-color:white;
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
 }
 
-/* NAVBAR */
-.navbar{
-position:fixed;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 25px;
-background:#061530;
+/* NAVIGATION */
+header{
+background:#081a3a;
+position:sticky;
+top:0;
 z-index:1000;
 }
 
-.logo img{height:60px;}
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+align-items:center;
+}
 
 .nav-links a{
 color:white;
 text-decoration:none;
+font-weight:bold;
 transition:0.3s;
-position:relative;
-}
-
-.nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-5px;
-width:0;
-height:2px;
-background:var(--accent);
-transition:0.3s;
-}
-
-.nav-links a:hover::after{
-width:100%;
 }
 
 .nav-links a:hover{
-color:var(--accent);
+color:#00c2ff;
 }
 
-/* HAMBURGER */
+.dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:white;
+min-width:220px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+border-radius:8px;
+overflow:hidden;
+}
+
+.dropdown-content a{
+color:#081a3a;
+padding:12px 15px;
+display:block;
+text-decoration:none;
+}
+
+.dropdown-content a:hover{
+background:#f2f2f2;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
 .menu-toggle{
 display:none;
 font-size:28px;
+color:white;
 cursor:pointer;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.nav-links{
-display:none;
-flex-direction:column;
-position:absolute;
-top:60px;
-right:0;
-background:#061530;
-width:250px;
-padding:20px;
-}
-.nav-links.active{display:flex;}
-.menu-toggle{display:block;}
 }
 
 /* HERO */
 .hero{
-height:100vh;
-position:relative;
-overflow:hidden;
-}
-
-.hero video{
-width:100%;
-height:100%;
-object-fit:cover;
-position:absolute;
-}
-
-.hero-overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
+background:linear-gradient(rgba(8,26,58,0.8), rgba(8,26,58,0.8)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+color:white;
 text-align:center;
-top:50%;
-transform:translateY(-50%);
+padding:120px 20px;
 }
 
 .hero h1{
-font-size:42px;
-color:white;
+font-size:52px;
+margin-bottom:20px;
 }
-.btn{
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:20px;
+margin-bottom:30px;
+}
+
+.hero-buttons a{
 display:inline-block;
-margin-top:20px;
-background:linear-gradient(135deg,#d4af37,#f5d76e);
-color:#061530;
+margin:10px;
 padding:14px 28px;
 border-radius:8px;
 text-decoration:none;
@@ -133,292 +127,252 @@ font-weight:bold;
 transition:0.3s;
 }
 
-.btn:hover{
+.btn-primary{
+background:#00c2ff;
+color:#081a3a;
+}
+
+.btn-secondary{
+background:white;
+color:#081a3a;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(212,175,55,0.5);
 }
 
-/* SECTION */
-.container{
-max-width:1100px;
-margin:auto;
-padding:80px 20px;
+/* SERVICES */
+.section{
+padding:80px 8%;
 }
 
-/* GRID */
-.grid{
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:50px;
+color:#081a3a;
+}
+
+.services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
 gap:25px;
 }
 
-/* CARD */
 .card{
-background:var(--card);
-padding:25px;
-border-radius:12px;
-text-align:center;
-opacity:0;
-transform:translateY(40px);
-transition:0.6s;
-text-decoration:none;
-color:white;
-display:block;
-border:1px solid rgba(212,175,55,0.3);
-position:relative;
-overflow:hidden;
-}
-
-/* GOLD LINE */
-.card::before{
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--accent),transparent);
-transition:0.5s;
-}
-
-.card:hover::before{
-left:100%;
-}
-
-/* HOVER */
-.card:hover{
-transform:translateY(-8px) scale(1.02);
-box-shadow:0 0 25px rgba(212,175,55,0.35);
-border-color:var(--accent);
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* TESTIMONIAL */
-.testimonial{
-background:var(--card);
-padding:20px;
-border-radius:10px;
-text-align:center;
-border:1px solid rgba(212,175,55,0.2);
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.testimonial:hover{
-box-shadow:0 0 20px rgba(212,175,55,0.3);
+.card:hover{
 transform:translateY(-5px);
 }
 
-.testimonial img{
-width:60px;
-height:60px;
-border-radius:50%;
-margin-bottom:10px;
+.card i{
+font-size:40px;
+margin-bottom:15px;
+color:#081a3a;
 }
 
-/* WHY US */
-.why{
-background:#061530;
-padding:60px 20px;
+.card h3{
+margin-bottom:15px;
+color:#081a3a;
+}
+
+/* BLOG CTA */
+.blog-section{
+background:#081a3a;
+color:white;
 text-align:center;
+padding:80px 20px;
+}
+
+.blog-section h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.blog-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:#00c2ff;
+color:#081a3a;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
 }
 
 /* FOOTER */
-.footer{
-background:#061530;
-padding:40px;
-text-align:center;
-}
-  .footer a{
+footer{
+background:#050f22;
 color:white;
-margin:0 8px;
-text-decoration:none;
-transition:0.3s;
+text-align:center;
+padding:30px 20px;
 }
 
-.footer a:hover{
-color:var(--accent);
-}
-h1{
-color:white;
+/* MOBILE */
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#081a3a;
+position:absolute;
+top:70px;
+right:0;
+width:100%;
+padding:20px;
 }
 
-h2{
-color:var(--accent);
-text-align:center;
-margin-bottom:20px;
+.nav-links.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.dropdown-content{
+position:static;
+box-shadow:none;
+background:#10284f;
+}
+
+.dropdown-content a{
+color:white;
+}
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
+<!-- HEADER -->
+<header>
 <div class="navbar">
-<div class="logo"><img src="logo.png"></div>
+<div class="logo">ProExceed</div>
 
-<div class="menu-toggle" onclick="toggleMenu()" id="menuIcon">☰</div>
+<div class="menu-toggle" id="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
 
-<div class="nav-links" id="navLinks">
-<a href="index.html">Home</a>
-<a href="tech.html">Tech</a>
-<a href="academy.html">Academy</a>
-<a href="wellness.html">Wellness</a>
-<a href="geoenergy.html">GeoEnergy</a>
-<a href="properties.html">Properties</a>
-<a href="eco.html">EcoMaterials</a>
-<a href="https://blog.proexceed.com">Blog</a>
+<div class="nav-links" id="nav-links">
+<a href="#">Home</a>
+
+<div class="dropdown">
+<a href="#">Services <i class="fas fa-caret-down"></i></a>
+<div class="dropdown-content">
+<a href="#">Academy</a>
+<a href="#">Tech & Digital Services</a>
+<a href="#">Wellness & Fitness</a>
+<a href="#">EcoMaterials & Recycling</a>
+<a href="#">GeoEnergy & Borehole Drilling</a>
+<a href="#">Properties & Estate</a>
 </div>
 </div>
+
+<a href="https://blog.proexceed.com">
+<i class="fas fa-blog"></i> Blog
+</a>
+
+<a href="#contact">Contact</a>
+</div>
+</div>
+</header>
 
 <!-- HERO -->
-<div class="hero">
-<video autoplay muted loop>
-<source src="https://www.w3schools.com/howto/rain.mp4">
-</video>
+<section class="hero">
+<h1>Welcome to ProExceed</h1>
+<p>
+Empowering students, professionals, and businesses through digital solutions, education, wellness, technology, and global opportunities.
+</p>
 
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-<h1>Global Solutions That Drive Growth</h1>
-<a href="#services" class="btn">Explore Services</a>
+<div class="hero-buttons">
+<a href="https://blog.proexceed.com" class="btn-primary">Visit Blog</a>
+<a href="#services" class="btn-secondary">Explore Services</a>
 </div>
-</div>
+</section>
 
 <!-- SERVICES -->
-<div id="services" class="container">
-<h2 style="text-align:center;">Our Services</h2>
+<section class="section" id="services">
+<h2 class="section-title">Our Services</h2>
 
-<div class="grid">
-
-<a href="tech.html" class="card">Tech & Digital Services</a>
-<a href="academy.html" class="card">Academy</a>
-<a href="wellness.html" class="card">Wellness & Fitness</a>
-<a href="geoenergy.html" class="card">GeoEnergy & Borehole</a>
-<a href="properties.html" class="card">Properties & Estate</a>
-<a href="eco.html" class="card">EcoMaterials & Recycling</a>
-
-</div>
+<div class="services">
+<div class="card">
+<i class="fas fa-graduation-cap"></i>
+<h3>Academy</h3>
+<p>Courses, ebooks, tutorials, educational resources, and online learning solutions.</p>
 </div>
 
-<!-- WHY US -->
-<div class="why">
-<h2>Why Choose ProExceed</h2>
-<p>Trusted globally • Professional delivery • Results-driven solutions</p>
+<div class="card">
+<i class="fas fa-laptop-code"></i>
+<h3>Tech & Digital Services</h3>
+<p>Web design, automation, AI solutions, branding, and digital business systems.</p>
 </div>
 
-<!-- TESTIMONIALS -->
-<div class="container">
-<h2 style="text-align:center;">What Our Clients Say</h2>
-
-<div class="grid">
-
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/men/1.jpg">
-<p>Excellent service</p>
-<b>John M., USA</b>
+<div class="card">
+<i class="fas fa-heartbeat"></i>
+<h3>Wellness & Fitness</h3>
+<p>Health guides, fitness programs, wellness products, and healthy lifestyle resources.</p>
 </div>
 
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/women/2.jpg">
-<p>Highly reliable</p>
-<b>Sarah K., UK</b>
+<div class="card">
+<i class="fas fa-recycle"></i>
+<h3>EcoMaterials & Recycling</h3>
+<p>Eco-friendly materials, sustainability, and recycling business opportunities.</p>
 </div>
 
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/men/3.jpg">
-<p>Top quality</p>
-<b>David L., Canada</b>
+<div class="card">
+<i class="fas fa-water"></i>
+<h3>GeoEnergy & Borehole Drilling</h3>
+<p>Water solutions, borehole services, energy consulting, and environmental support.</p>
 </div>
 
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/women/4.jpg">
-<p>Professional team</p>
-<b>Amina R., UAE</b>
-</div>
-
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/men/5.jpg">
-<p>Great experience</p>
-<b>Michael B., USA</b>
-</div>
-
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/women/6.jpg">
-<p>Outstanding</p>
-<b>Emily T., Australia</b>
-</div>
-
-<div class="testimonial">
-<img src="https://randomuser.me/api/portraits/men/7.jpg">
-<p>Highly recommend</p>
-<b>Chris D., Germany</b>
-</div>
-
+<div class="card">
+<i class="fas fa-building"></i>
+<h3>Properties & Estate</h3>
+<p>Real estate opportunities, property marketing, and investment solutions.</p>
 </div>
 </div>
-<!-- CONTACT -->
-<div class="container" id="contact">
-<h2 style="text-align:center;">Contact Us</h2>
+</section>
 
-<p style="text-align:center; margin-bottom:20px;">
-Get a <b>FREE Business Consultation</b>
-</p>
-
-<div style="text-align:center;">
-
-<p><b>Call Us:</b> +1********</p>
-
-<p><b>Email:</b> info@proexceed.com | support@proexceed.com</p>
-
-<a href="https://wa.me/2347018824241" class="btn">Chat With Us</a>
-
-</div>
-</div>
-<!-- FOOTER -->
-<div class="footer">
-
-<p>© 2026 ProExceed Transnational Limited</p>
-
+<!-- BLOG SECTION -->
+<section class="blog-section">
+<h2>Visit Our Blog</h2>
 <p>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="privacy.html">Privacy Policy</a>
-<a href="terms.html">Terms of Service</a>
-<a href="disclaimer.html">Disclaimer</a>
+Read educational articles, wellness tips, tech updates, business ideas, and professional guides.
 </p>
 
-</div>
+<a href="https://blog.proexceed.com" class="blog-btn">
+<i class="fas fa-blog"></i> Go to Blog
+</a>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+<p>© 2026 ProExceed. All Rights Reserved.</p>
+<p>Email: info@proexceed.com</p>
+</footer>
 
 <script>
-function toggleMenu(){
-let nav = document.getElementById("navLinks");
-let icon = document.getElementById("menuIcon");
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
 
-nav.classList.toggle("active");
-
-if(nav.classList.contains("active")){
-icon.innerHTML = "✖";
-}else{
-icon.innerHTML = "☰";
-}
-}
-
-/* SCROLL ANIMATION */
-const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
+menuToggle.addEventListener('click', () => {
+navLinks.classList.toggle('active');
 });
-});
-
-cards.forEach(card=>observer.observe(card));
 </script>
 
 </body>
