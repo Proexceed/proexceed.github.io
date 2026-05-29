@@ -666,7 +666,7 @@ document.getElementById("servicesDropdown").classList.toggle("open-mobile");
 
 /* SCROLL ANIMATION SYSTEM (Graceful degradation aware) */
 const cards = document.querySelectorAll('.card');
-cards.forEach(card => card.classList.add('js-reveal')); // Only hides cards if JS runs successfully
+// Only hides cards if JS runs successfully
 
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
