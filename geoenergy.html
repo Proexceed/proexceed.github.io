@@ -71,7 +71,11 @@ font-size:40px;
 
 /* BUTTON */
 .btn{
-background:linear-gradient(135deg,#d4af37,#f5d76e);
+background:linear-gradient(
+135deg,
+var(--gold-light),
+var(--gold)
+);
 color:#061530;
 padding:12px 25px;
 border-radius:8px;
@@ -79,6 +83,7 @@ text-decoration:none;
 font-weight:bold;
 display:inline-block;
 margin-top:15px;
+transition:.3s ease;
 }
 
 .btn:hover{
