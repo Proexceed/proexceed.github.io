@@ -288,7 +288,14 @@ box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
 .btn:hover{
-transform:translateY(-3px);
+background:linear-gradient(
+135deg,
+#C5A046,
+#886B1D
+);
+
+transform:translateY(-2px);
+}
 box-shadow:0 6px 15px rgba(0,0,0,0.15);
 opacity:0.95;
 box-shadow:0 10px 25px rgba(201,162,39,0.35);
