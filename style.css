@@ -1,9 +1,13 @@
 :root{
-  --primary:#0a1f44;
-  --secondary:#061530;
-  --card:#0f2a5a;
-  --accent:#c9a227;
-  --text:#ffffff;
+--primary:#0A1F44;
+--secondary:#061530;
+--card:#102A5C;
+
+--gold:#C5A046;
+--gold-light:#E3D07F;
+--gold-dark:#886B1D;
+
+--white:#FFFFFF;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
