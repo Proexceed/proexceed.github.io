@@ -27,14 +27,17 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 25px;
+padding:20px 25px;
 background:rgba(6,21,48,0.7); /* Reduced alpha for enhanced blur effect */
 z-index:1000;
 backdrop-filter:blur(10px);
 -webkit-backdrop-filter:blur(10px);
 }
 
-.logo img{height:60px;}
+.logo img{
+height:95px;
+width:auto;
+}
 .nav-links{
 display:flex;
 align-items:center;
