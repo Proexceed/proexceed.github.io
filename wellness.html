@@ -6,39 +6,41 @@
 <title>ProExceed Wellness</title>
 
 <style>
+:root{
+--primary:#0A1F44;
+--secondary:#061530;
+--card:#102A5C;
+
+--gold:#C5A046;
+--gold-light:#E3D07F;
+--gold-dark:#886B1D;
+}
+
 body{
 font-family:Segoe UI;
-background:#0a1f44;
+background:var(--primary);
 color:white;
 margin:0;
 }
 
-.container{padding:20px;}
-
-h1,h2{color:#d4af37;}
-
-.card{
-background:#102a5c;
-padding:20px;
-border-radius:12px;
-margin:15px 0;
+.navbar{
+background:var(--secondary);
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
 }
 
-.btn{
-display:block;
-background:#d4af37;
-color:#081a3a;
-padding:14px;
-margin-top:10px;
-border-radius:8px;
-text-align:center;
+.navbar a{
+color:white;
 text-decoration:none;
-font-weight:bold;
+margin-left:15px;
+transition:0.3s;
 }
 
-.contact{
-text-align:center;
-margin-top:40px;
+.navbar a:hover{
+color:var(--gold);
 }
 
 .container{
@@ -46,6 +48,49 @@ max-width:800px;
 margin:auto;
 padding:40px 20px;
 text-align:center;
+}
+
+h1,h2{
+color:var(--gold);
+}
+
+.card{
+background:var(--card);
+padding:20px;
+border-radius:12px;
+margin:15px 0;
+border:1px solid rgba(197,160,70,0.25);
+}
+
+.btn{
+display:block;
+background:linear-gradient(
+135deg,
+var(--gold-light),
+var(--gold)
+);
+color:#081A3A;
+padding:14px;
+margin-top:10px;
+border-radius:8px;
+text-align:center;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s ease;
+}
+
+.btn:hover{
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--gold-dark)
+);
+transform:translateY(-2px);
+}
+
+.contact{
+text-align:center;
+margin-top:40px;
 }
 
 .service-logo{
@@ -61,7 +106,8 @@ background:var(--secondary);
 padding:30px 20px;
 text-align:center;
 margin-top:50px;
-}  
+border-top:1px solid rgba(197,160,70,0.25);
+}
 </style>
 </head>
 
