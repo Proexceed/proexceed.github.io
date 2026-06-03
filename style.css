@@ -302,7 +302,7 @@ transform:translateY(-2px);
 box-shadow:0 6px 15px rgba(0,0,0,0.15);
 opacity:0.95;
 box-shadow:0 10px 25px rgba(201,162,39,0.35);
-transition:all 0.3s ease;  
+transition:all 0.3s eae;  
 }
 
 /* SECTION */
@@ -340,7 +340,7 @@ transform:none;
 
 .card i{
 font-size:28px;
-color:var(--accent);
+color:#C5AA4D;
 margin-bottom:18px;
 display:block;
 }
